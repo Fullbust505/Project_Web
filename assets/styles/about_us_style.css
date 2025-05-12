@@ -1,0 +1,15 @@
+/*      /!\ WARNING /!\     */
+/*Keep in mind that your page inherited from multiple style sheets.
+As long as you don't redefine a property, it will be the same as in the "common_styles" file.
+By extension, you also inherit from the different fonts imported by the other style fles.
+*/
+
+#main_text{
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+h1{
+    font-family: UbuntuB;
+}

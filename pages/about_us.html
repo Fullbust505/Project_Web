@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <title>Full Indie - About Us</title>
+        <link rel="stylesheet" href="../assets/styles/common_styles.css">
+        <link rel="stylesheet" href="../assets/styles/about_us_style.css">
+    </head>
+        <nav>
+            <a href="./home.html">Home</a>
+            <a href="./hades.html" id="hades_btn">
+                <img src="../assets/images/hades_logo.png" alt="Hades' logo">
+            </a>
+            <a href="./slay_the_spire.html" id="sps_btn">
+                <img src="../assets/images/sps_logo.png" alt="Slay The Spire's logo">
+            </a>
+            <a href="./ghostrunner.html" id="gr_btn">
+                <img src="../assets/images/gr_logo.png" alt="Ghostrunner's logo">
+            </a>
+            <a href="./about_us.html">About Us</a>
+        </nav>
+    </head>
+    
+    <body>
+        <section id="main_text">
+        <h1>Who are we ?</h1>
+            <div>
+                <h2>The Team</h2>
+                <p>When you took your first look on our website, you might have thought that we were a bunch working behind, didn'tcha ?
+                    Well sorry to break the myth, but we're only 2 ! However, we both prefer to stay anonymous, since this project is on a public Github repository.
+                </p>
+                <p>We're of course fervent video game enjoyers, as we tried games ranging from visual novels to obnoxiously raging rogue-likes. 
+                    But as we dove into deeper in this world, we realized that the best one we've tried come from small creators ! As a tribute to them, our website came to life.
+                </p>
+            </div>
+            <div>
+                <h2>Our contacts</h2>
+                <p>We're always happy to get YOUR point of view on the games we played ! After all, stories hit different according to the reader and its past exeperiences.
+                    Feel free to send us a message via the form right below ;).
+                </p>
+            </div>
+
+            <form action="" method="post">  <!--idk what to put in the "action" field-->
+                <fieldset>
+                    <legend>Contact us !</legend>
+                    <p>
+                        <label>Your Username : </label>
+                        <input type="text" id="user_name">
+                    </p>
+                    <p>
+                        <label>Your Email Address : </label>
+                        <input type="email" id="user_email">    <!--if we feel spicy, we can put a radio btn "I want an answer" where only one option can be clicked-->
+                    </p>
+                    <p>
+                        <label>Your Message : </label>
+                        <input type="text" id="user_msg">
+                    </p>
+                </fieldset>
+                <button type="button">Send</button>     <!--if we feel extra spicy, we can even make it send real mails, it's a bit of php i think, dunno know if it's hard to set up-->
+            </form>
+        </section>
+    </body>
+
+    <footer>
+        <p>Enjoying our reviews ?</p>
+        <a href="../pages/about_us.html">Come help us out !</a>
+    </footer>
+</html>
