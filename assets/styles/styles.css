@@ -1,9 +1,26 @@
+@font-face {    
+  font-family: UbuntuR;
+  src: url("../fonts/ubuntu-font-family-0.80/Ubuntu-R.ttf");
+}
+/*If you want to add a font, add another "@font-face"*/
+/*If you want to add a variant of a font, do the same, keep the same name, but precise the change with font-weight or smtg else*/
+/*https://www.w3schools.com/css/css3_fonts.asp*/
+
+body{
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/all_games.png");
+    background-size: cover;
+    font-family: UbuntuR;
+    color: whitesmoke;
+}
+
 nav{
     font-size: x-large;
-
+    font-family: UbuntuR;
     text-align: left;
 
-    border: solid;
+    border-bottom: solid;
+    border-color: black;
     background-color: aliceblue;
 
     height: 20%;
@@ -15,24 +32,37 @@ nav{
 nav a{
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 5%;
+    margin-left: 6%;
+    text-align: center;
 
     border-radius: 3px;
 
     text-decoration-line: none;
     color: black;
+
+    transition: transform 0.3s ease;
+}
+
+nav a:hover{
+    transform: scale(1.1);
 }
 
 nav a:first-child{
+    margin-left: 3%;
     background-color: antiquewhite;
 }
 
-nav a:nth-child(2){
+#hades_btn{
     background-color: crimson;
 }
 
-nav a:nth-child(3){
+#sps_btn{
     background-color: #E08D3C;
+}
+
+#hades_btn img, #sps_btn img{
+    width: 100%;
+    height: 50px;
 }
 
 nav a:last-child{
