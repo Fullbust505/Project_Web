@@ -1,0 +1,40 @@
+nav{
+    font-size: x-large;
+
+    text-align: left;
+
+    border: solid;
+    background-color: aliceblue;
+
+    height: 20%;
+    display: flex;
+    padding: 0;
+    /*gap: 5%;*/
+}
+
+nav a{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+
+    border-radius: 3px;
+
+    text-decoration-line: none;
+    color: black;
+}
+
+nav a:first-child{
+    background-color: antiquewhite;
+}
+
+nav a:nth-child(2){
+    background-color: crimson;
+}
+
+nav a:nth-child(3){
+    background-color: #E08D3C;
+}
+
+nav a:last-child{
+    background-color: grey;
+}
