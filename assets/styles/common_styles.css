@@ -4,7 +4,8 @@
 }
 
 @font-face {
-    font-family: UbuntuB;
+    font-family: UbuntuR;
+    font-weight: bold;
     src: url("../fonts/ubuntu-font-family-0.80/Ubuntu-B.ttf");
 }
 /*If you want to add a font, add another "@font-face"*/
@@ -14,7 +15,7 @@
 body{
     margin: 0;
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/all_games.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/all_games.png");
     background-size: cover;
     font-family: UbuntuR;
     color: whitesmoke;

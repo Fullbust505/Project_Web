@@ -6,10 +6,56 @@ By extension, you also inherit from the different fonts imported by the other st
 
 #main_text{
     padding-top: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 h1{
-    font-family: UbuntuB;
+    font-family: UbuntuR;
+    font-weight: bold;
+}
+
+#form_sub_box{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1em;
+}
+
+legend{
+    text-align: center;
+    font-size: 2em;
+}
+
+#form_sub_box p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+}
+
+#form_sub_box p label{
+    margin-left: 0;
+    text-align: left;
+    flex: none;
+    width: 180px;
+}
+
+#form_sub_box p input{
+    flex: 1;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: thick double black;
+    border-radius: 5px;
+}
+
+#user_msg{
+    height: 100px;
 }
