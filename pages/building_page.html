@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">    <!--J'avoue c'est copilot qui a cook-->
+<head>
+    <meta charset="UTF-8">
+    <title>Page Under Construction</title>
+    <style>
+        body {
+            background: #222;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .warning-sign {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            animation: blink 1.2s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .main-message {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .guideline {
+            font-size: 1.2rem;
+            color: #ffcc00;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .construction-barrier {
+            width: 300px;
+            height: 30px;
+            background: repeating-linear-gradient(
+                135deg,
+                #ffcc00,
+                #ffcc00 20px,
+                #222 20px,
+                #222 40px
+            );
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .footer {
+            font-size: 1rem;
+            color: #888;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="warning-sign">⚠️</div>
+    <div class="main-message">Beware traveler, you shouldn't wander so off bounds...</div>
+    <div class="guideline">This page is still under construction.<br>Please check back later!</div>
+    <div class="construction-barrier"></div>
+    <div class="footer">© 2024 Project Web</div>
+</body>
+</html>

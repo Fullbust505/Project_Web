@@ -4,12 +4,6 @@ As long as you don't redefine a property, it will be the same as in the "common_
 By extension, you also inherit from the different fonts imported by the other style fles.
 */
 
-#main_text{
-    padding-top: 20px;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
 h1{
     font-family: UbuntuR;
     font-weight: bold;
