@@ -12,7 +12,7 @@
 /*If you want to add a variant of a font, do the same, keep the same name, but precise the change with font-weight or smtg else*/
 /*https://www.w3schools.com/css/css3_fonts.asp*/
 
-body{
+body{/*
     margin: 0;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/all_games.png");
@@ -28,7 +28,7 @@ body{
 #main_text{
     padding-top: 20px;
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 5%; */
 }
 
 /* NAVIGATION BAR */

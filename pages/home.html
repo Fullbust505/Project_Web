@@ -1,57 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset='utf-8'>
-        <title>Full Indie - Home</title>
-        <link rel="stylesheet" href="../assets/styles/common_styles.css">
-    </head>
-        
-    <body>
-        <header>
-            <nav>
-                <a href="./home.html">Home</a>
-                <a href="./hades.html" id="hades_btn">
-                    <img src="../assets/images/hades_logo.png" alt="Hades' logo">
-                </a>
-                <a href="./slay_the_spire.html" id="sps_btn">
-                    <img src="../assets/images/sps_logo.png" alt="Slay The Spire's logo">
-                </a>
-                <a href="./ghostrunner.html" id="gr_btn">
-                    <img src="../assets/images/gr_logo.png" alt="Ghostrunner's logo">
-                </a>
-                <a href="./about_us.html">About Us</a>
-            </nav>
-        </header>
+<head>
+    <meta charset='utf-8'>
+    <title>Full Indie - Home</title>
+    <link rel="stylesheet" href="../assets/styles/common_styles.css">
+    <link rel="stylesheet" href="../assets/styles/carousel.css">
+</head>
+<body>
+    <!-- Carrousel de fond -->
+    <div id="bg-carousel">
+        <div class="bg-slide active" style="background-image: url('../assets/images/Carghostrunner.jpg');"></div>
+        <div class="bg-slide" style="background-image: url('../assets/images/Carhades.png');"></div>
+        <div class="bg-slide" style="background-image: url('../assets/images/Carsts.png');"></div>
+    </div>
 
-        <section id="main_text">
-            
-            <aside id="sidebar">
-                <h3>You might like : </h3>
-                <section>
-                    <a href="./building_page.html" class="reco_box">
-                        <div></div> 
-                        <p>"A true masterpiece". We finally tested Hollow Knight.</p>
-                    </a>
-                    <a href="./building_page.html" class="reco_box">
-                        <div></div>
-                        <p>22 minutes to save the world. How Outer Wilds changed us.</p>
-                    </a>
-                    <a href="./building_page.html" class="reco_box">
-                        <div></div>
-                        <p>Your only option : learn the language from scratch. A shocking discovery.</p>
-                    </a>
-                </section>
-            </aside >
+    <header>
+        <nav>
+            <a href="./home.html">Home</a>
+            <a href="./hades.html" id="hades_btn">
+                <img src="../assets/images/hades_logo.png" alt="Hades' logo">
+            </a>
+            <a href="./slay_the_spire.html" id="sps_btn">
+                <img src="../assets/images/sps_logo.png" alt="Slay The Spire's logo">
+            </a>
+            <a href="./ghostrunner.html" id="gr_btn">
+                <img src="../assets/images/gr_logo.png" alt="Ghostrunner's logo">
+            </a>
+            <a href="./about_us.html">About Us</a>
+        </nav>
+    </header>
 
-            <h1>Welcome to Full Indie !</h1>
-            <p>Find out our indepths reviews of inde games excluded from the spotlight.</p>
-        </section>
+    <section id="main_text">
+        <aside id="sidebar">
+            <h3>You might like : </h3>
+            <section>
+                <a href="./building_page.html" class="reco_box">
+                    <div></div> 
+                    <p>"A true masterpiece". We finally tested Hollow Knight.</p>
+                </a>
+                <a href="./building_page.html" class="reco_box">
+                    <div></div>
+                    <p>22 minutes to save the world. How Outer Wilds changed us.</p>
+                </a>
+                <a href="./building_page.html" class="reco_box">
+                    <div></div>
+                    <p>Your only option : learn the language from scratch. A shocking discovery.</p>
+                </a>
+            </section>
+        </aside >
+        <h1>Welcome to Full Indie !</h1>
+        <p>Find out our indepths reviews of inde games excluded from the spotlight.</p>
+    </section>
     
     <footer>
         <p>Enjoying our reviews ?</p>
         <a href="../pages/about_us.html">Come help us out !</a>
     </footer>
-    
-    </body>
 
+    <!-- Le script doit être juste avant la fermeture du body -->
+    <script>
+        const slides = document.querySelectorAll('.bg-slide');
+        let current = 0;
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 4000);
+    </script>
+</body>
 </html>
