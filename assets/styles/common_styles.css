@@ -12,6 +12,8 @@
 /*If you want to add a variant of a font, do the same, keep the same name, but precise the change with font-weight or smtg else*/
 /*https://www.w3schools.com/css/css3_fonts.asp*/
 
+/* MAIN TEXT */
+
 body{
     margin: 0;
 
@@ -29,6 +31,12 @@ body{
     padding-top: 20px;
     padding-left: 5%;
     padding-right: 5%;
+
+    display: flex;
+}
+
+#main_text #intro{
+    justify-content: center;
 }
 
 /* NAVIGATION BAR */
@@ -92,55 +100,7 @@ nav a:last-child{
     background-color: grey;
 }
 
-/* SIDE BAR */
-
-#sidebar{
-    max-width: 300px;   /*Change this to change width of the sidebar*/
-
-    position: sticky;
-    margin: 50px;
-    padding: 10px;
-    top: 20px;
-    float: right;
-
-    border: solid 2px;
-    background-color: rgba(30, 30, 30, 0.8);
-}
-
-#sidebar section{
-    padding: 10px;
-}
-
-.reco_box{
-    padding: 0;
-    margin-bottom: 24px;    /*Doesn't work lmao dunno why*/
-    
-    display: block;
-    width: 100%;
-}
-
-.reco_box div{
-    width: 100%;
-    height: 150px;
-    background-size: cover;
-    border-radius: 10px;
-}
-
-.reco_box:nth-child(1) div{
-    background-image: url("../images/hollow_knight.png");
-}
-
-.reco_box:nth-child(2) div{
-    background-image: url("../images/outer_wilds.jpg");
-}
-
-.reco_box:nth-child(3) div{
-    background-image: url("../images/7_days_to_end_with_you.jpg");
-}
-
-
 /* FOOTER */
-
 
 footer{
     margin: 10px;
