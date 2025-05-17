@@ -14,7 +14,9 @@
 
 /* MAIN TEXT */
 
-body{
+/* MAIN TEXT */
+
+body{/*
     margin: 0;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/all_games.png");
@@ -30,7 +32,7 @@ body{
 #main_text{
     padding-top: 20px;
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 5%; */
 
     display: flex;
 }
