@@ -5,122 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hades</title>
     <link rel="stylesheet" href="../assets/styles/common_styles.css">
-    <link rel="stylesheet" href="../assets/styles/about_us_style.css">
-    <style>
-        body {
-            background: no-repeat center center fixed;
-            background-image: url(../assets/images/bg_hades.jpg);
-            background-size: cover;
-        }
-        .critique-container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: rgba(30, 30, 30, 0.85);
-            color: #fff;
-            border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.5);
-            padding: 32px;
-        }
-        .critique-header {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            margin-bottom: 24px;
-        }
-        .critique-title {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin: 0;
-        }
-        .critique-subtitle {
-            font-size: 1.2em;
-            color: #ffd700;
-            margin-bottom: 0;
-        }
-        .critique-section {
-            margin: 32px 0;
-        }
-        .critique-section h2 {
-            color: #ffd700;
-            margin-bottom: 12px;
-        }
-        .critique-score {
-            font-size: 2em;
-            color: #ffd700;
-            font-weight: bold;
-            margin-top: 0;
-        }
-        @media (max-width: 700px) {
-            .critique-header { flex-direction: column; align-items: flex-start; }
-            .critique-container { padding: 12px; }
-        }
-        /* Style for the music image button */
-        #launchmusicbutton {
-            background: none;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-            border-radius: 8px;
-            outline: none;
-            transition: box-shadow 0.2s;
-        }
-        #launchmusicbutton img {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            background: #ffd700;
-            object-fit: cover;
-        }
-        #launchmusicbutton.playing img {
-            filter: grayscale(60%) brightness(0.8);
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/styles/hades_style.css">
 </head>
+
 <body>
-    <!-- Music button top right -->
-    <div style="position: fixed; top: 20px; right: 32px; z-index: 1000; display: flex; align-items: center;">
-        <span style="font-size: 0.95em; color: #eee; margin-right: 10px; opacity: 0.8;">
-            Click here to hear the videogame music&nbsp;!
-        </span>
-        <button id="launchmusicbutton" title="Play/Pause music">
-            <img id="music-img" src="../assets/images/music_icon.png" alt="Music button">
-        </button>
-        <audio id="bg-music" src="../assets/sounds/Hades - No Escape.mp3" loop></audio>
-    </div>
-    <script>
-        const btn = document.getElementById('launchmusicbutton');
-        const audio = document.getElementById('bg-music');
-        const img = document.getElementById('music-img');
-        let isPlaying = false;
-
-        function setButtonState(playing) {
-            if (playing) {
-                btn.classList.add('playing');
-                img.style.opacity = "0.7";
-            } else {
-                btn.classList.remove('playing');
-                img.style.opacity = "1";
-            }
-        }
-
-        btn.onclick = function() {
-            if (!isPlaying) {
-                audio.play();
-            } else {
-                audio.pause();
-            }
-        };
-
-        audio.onpause = function() {
-            isPlaying = false;
-            setButtonState(false);
-        };
-        audio.onplay = function() {
-            isPlaying = true;
-            setButtonState(true);
-        };
-    </script>
 
     <!-- Top bar with game logos -->
     <header>
@@ -138,8 +26,18 @@
             <a href="./about_us.html">About Us</a>
         </nav>
     </header>
+    <!-- Music button top right -->
+    <div style="position: fixed; top: 20px; right: 32px; z-index: 1000; display: flex; align-items: center;">
+        <span style="font-size: 0.95em; color: #eee; margin-right: 10px; opacity: 0.8;">
+            Click here to hear the videogame music&nbsp;!
+        </span>
+        <button id="launchmusicbutton" title="Play/Pause music">
+            <img id="music-img" src="../assets/images/music_icon.png" alt="Music button">
+        </button>
+        <audio id="bg-music" src="../assets/sounds/Hades - No Escape.mp3" loop></audio>
+    </div>
 
-    <main>
+    <main id="main_grid">
         <div class="critique-container">
             <div class="critique-header">
                 <div>
@@ -190,6 +88,23 @@
                 <p class="critique-score">9.5 / 10</p>
             </div>
         </div>
+        <aside id="sidebar">
+            <h3>You might like : </h3>
+            <section>
+                <a href="./building_page.html" class="reco_box">
+                    <div></div> 
+                    <p>"A true masterpiece". We finally tested Hollow Knight.</p>
+                </a>
+                <a href="./building_page.html" class="reco_box">
+                    <div></div>
+                    <p>22 minutes to save the world. How Outer Wilds changed us.</p>
+                </a>
+                <a href="./building_page.html" class="reco_box">
+                    <div></div>
+                    <p>Your only option : learn the language from scratch. A shocking discovery.</p>
+                </a>
+            </section>
+        </aside >
     </main>
 </body>
 </html>
