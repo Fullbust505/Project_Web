@@ -9,13 +9,13 @@ body {
 
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 10px;
+    grid-gap: 5%;
     width: 100%;
 }
 
 .critique-container {
     max-width: 900px;  
-    padding: 32px;
+    padding: 50px;
     margin-left: 50px;
     
     background: rgba(30, 30, 30, 0.85);
