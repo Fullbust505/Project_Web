@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slay the Spire</title>
-    <style>
+    <link rel="stylesheet" href="../assets/styles/common_styles.css">
+    <link rel="stylesheet" href="../assets/styles/sts_style.css">
+
+   <!-- <style>
         .card-container {
             perspective: 1000px;
             width: 200px;
@@ -41,14 +44,187 @@
             justify-content: center;
             align-items: center;
         }
-    </style>
+    </style> -->
 </head>
 <body>
+    <!--<div class="card-container">
+        <div class="card">
+            <div class="card-front"></div>
+            <div class="card-back">test</div>
+        </div>
+    </div> -->
+
+   <!-- Top bar with game logos -->
+    <header>
+        <nav>
+            <a href="./home.html">Home</a>
+            <a href="./hades.html" id="hades_btn">
+                <img src="../assets/images/hades_logo.png" alt="Hades' logo">
+            </a>
+            <a href="./slay_the_spire.html" id="sps_btn">
+                <img src="../assets/images/sps_logo.png" alt="Slay The Spire's logo">
+            </a>
+            <a href="./ghostrunner.html" id="gr_btn">
+                <img src="../assets/images/gr_logo.png" alt="Ghostrunner's logo">
+            </a>
+            <a href="./about_us.html">About Us</a>
+        </nav>
+    </header>
+    <!-- Music button top right -->
+    <div style="position: fixed; top: 20px; right: 32px; z-index: 1000; display: flex; align-items: center;">
+        <span style="font-size: 0.95em; color: #eee; margin-right: 10px; opacity: 0.8;">
+            Click here to hear the videogame music&nbsp;!
+        </span>
+        <button id="launchmusicbutton" title="Play/Pause music">
+            <img id="music-img" src="../assets/images/music_icon.png" alt="Music button">
+        </button>
+        <audio id="bg-music" src="../assets/sounds/sts_main.mp3" loop></audio>
+    </div>
+    <script>
+        const btn = document.getElementById('launchmusicbutton');
+        const audio = document.getElementById('bg-music');
+        const img = document.getElementById('music-img');
+        let isPlaying = false;
+
+        function setButtonState(playing) {
+            if (playing) {
+                btn.classList.add('playing');
+                img.style.opacity = "0.7";
+            } else {
+                btn.classList.remove('playing');
+                img.style.opacity = "1";
+            }
+        }
+
+        btn.onclick = function() {
+            if (!isPlaying) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        };
+
+        audio.onpause = function() {
+            isPlaying = false;
+            setButtonState(false);
+        };
+        audio.onplay = function() {
+            isPlaying = true;
+            setButtonState(true);
+        };
+    </script>
+
+    <!-- Slay the Spire logo at the top of the page -->
+    <div style="text-align:center; margin-top:32px;">
+        <img src="../assets/images/sps_logo.png" alt="Slay the Spire logo" style="width:160px; max-width:90vw;">
+    </div>
+
+    <main id="main_grid">
+        <div class="critique-container">
+            <div class="critique-header">
+                <div>
+                    <h1 class="critique-title">Slay the Spire</h1>
+                    <p class="critique-subtitle">MegaCrit &mdash; 2019</p>
+                </div>
+            </div>
+            <div class="critique-section">
+                <h2>Our Review</h2>
+                <p>
+                    Slay the Spire is a masterful blend of roguelike progression and deck-building strategy. Each run is a new puzzle, requiring careful planning, adaptation, and a bit of luck. The game’s replayability and depth make it a must-play for fans of strategy and card games.
+                </p>
+            </div>
+<div class="critique-section">
+    <h2>Strengths</h2>
+    <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+        <div class="card-container">
+            <div class="card">
+                <div class="card-front"></div>
+                <div class="card-back">Deep and strategic deck-building mechanics</div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-front"></div>
+                <div class="card-back">High replay value with procedurally generated runs</div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-front"></div>
+                <div class="card-back">Unique characters and playstyles</div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-front"></div>
+                <div class="card-back">Challenging and rewarding progression</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="critique-section">
+    <h2>Weaknesses</h2>
+    <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+        <div class="card-container">
+            <div class="card">
+                <div class="card-front"></div>
+                <div class="card-back">Luck can sometimes outweigh strategy</div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-front"></div>
+                <div class="card-back">Visuals are functional but not outstanding</div>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="critique-section">
+                <h2>Gameplay</h2>
+                <div style="display: flex; justify-content: center;">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/9SZUtyYSOjQ?start=5"
+                        title="Slay the Spire Gameplay"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p>
+                    Watch an overview of Slay the Spire's strategic and challenging gameplay in this video!
+                </p>
+            </div>
+            <div class="critique-section">
+                <h2>Our Score</h2>
+                <p class="critique-score">9 / 10</p>
+            </div>
+        </div>
+        <aside id="sidebar">
+            <h3>You might like:</h3>
+            <section>
+                <a href="./building_page.html" class="reco_box">
+                    <div></div> 
+                    <p>"A true masterpiece". We finally tested Hollow Knight.</p>
+                </a>
+                <a href="./building_page.html" class="reco_box">
+                    <div></div>
+                    <p>22 minutes to save the world. How Outer Wilds changed us.</p>
+                </a>
+                <a href="./building_page.html" class="reco_box">
+                    <div></div>
+                    <p>Your only option: learn the language from scratch. A shocking discovery.</p>
+                </a>
+            </section>
+        </aside >
+    </main>
+
+    <!--
     <div class="card-container">
         <div class="card">
             <div class="card-front"></div>
             <div class="card-back">test</div>
         </div>
     </div>
+    -->
 </body>
 </html>
