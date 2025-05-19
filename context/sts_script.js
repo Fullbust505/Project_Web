@@ -1,7 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
     const numPairs = 6;
-    const cardImages = Array(numPairs).fill('testcard.png'); // Pour l'instant, toutes les mêmes images
-    let cards = [...cardImages, ...cardImages].map((img, i) => ({img, id: i}));
+    // Chaque paire a un pairId unique, même si l'image est la même
+    const cardImages = [        
+        'card1.png',
+        'card2.png',
+        'card3.png',
+        'card4.png',
+        'card5.png',
+        'card6.png',
+        'card7.png',
+        'card8.png'];
+    let cards = [];
+    cardImages.forEach((img, i) => {
+        cards.push({ img, pairId: i, uniqueId: `a${i}` });
+        cards.push({ img, pairId: i, uniqueId: `b${i}` });
+    });
     cards = cards.sort(() => Math.random() - 0.5);
 
     const memoGame = document.getElementById('memo-game');
@@ -20,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const container = document.createElement('div');
         container.className = "memo-card-container";
         container.innerHTML = `
-            <div class="memo-card" data-idx="${idx}">
+            <div class="memo-card" data-idx="${idx}" data-pairid="${card.pairId}" data-uniqueid="${card.uniqueId}">
                 <div class="memo-card-front"></div>
                 <div class="memo-card-back"><img src="../images/${card.img}" alt="" style="width:80px;height:110px;border-radius:8px;"></div>
             </div>
@@ -35,9 +48,12 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (!secondCard && this !== firstCard) {
                 secondCard = this;
                 lock = true;
-                const idx1 = parseInt(firstCard.dataset.idx);
-                const idx2 = parseInt(secondCard.dataset.idx);
-                if (cards[idx1].img === cards[idx2].img) {
+                // On compare les pairId pour vérifier la paire, mais uniqueId pour éviter de cliquer deux fois sur la même carte
+                const pairId1 = firstCard.getAttribute('data-pairid');
+                const pairId2 = secondCard.getAttribute('data-pairid');
+                const uniqueId1 = firstCard.getAttribute('data-uniqueid');
+                const uniqueId2 = secondCard.getAttribute('data-uniqueid');
+                if (pairId1 === pairId2 && uniqueId1 !== uniqueId2) {
                     firstCard.classList.add('matched');
                     secondCard.classList.add('matched');
                     matched++;
