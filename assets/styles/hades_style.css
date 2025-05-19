@@ -16,7 +16,7 @@ body {
 .critique-container {
     max-width: 900px;  
     padding: 50px;
-    margin-left: 50px;
+    margin-left: 10%;
     
     background: rgba(30, 30, 30, 0.85);
     color: #fff;
