@@ -44,23 +44,23 @@
                 </p>
             </div>
 
-            <form action="" method="post">  <!--idk what to put in the "action" field-->
+            <form action="https://formspree.io/f/mjkwdeka" method="POST">
                 <fieldset id="form_sub_box">
                     <legend>Contact us !</legend>
                     <p>
                         <label>Your Username : </label>
-                        <input type="text" id="user_name">
+                        <input type="text" name="username" required>
                     </p>
                     <p>
                         <label>Your Email Address : </label>
-                        <input type="email" id="user_email">    <!--if we feel spicy, we can put a radio btn "I want an answer" where only one option can be clicked-->
+                        <input type="email" name="email" required>
                     </p>
                     <p>
                         <label>Your Message : </label>
-                        <input type="text" id="user_msg">
+                        <input type="text" name="message" required>
                     </p>
                 </fieldset>
-                <button type="button">Send</button>     <!--if we feel extra spicy, we can even make it send real mails, it's a bit of php i think, dunno know if it's hard to set up-->
+                <button type="submit">Send</button>
             </form>
         </section>
 
