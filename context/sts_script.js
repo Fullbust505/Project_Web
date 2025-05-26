@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         container.innerHTML = `
             <div class="memo-card" data-idx="${idx}" data-pairid="${card.pairId}" data-uniqueid="${card.uniqueId}">
                 <div class="memo-card-front"></div>
-                <div class="memo-card-back"><img src="../assets/images/${card.img}" alt="" style="width:80px;height:110px;border-radius:8px;"></div>
+                <div class="memo-card-back"><img src="../assets/images/cards/${card.img}" alt="" style="width:80px;height:110px;border-radius:8px;"></div>
             </div>
         `;
         memoGame.appendChild(container);
