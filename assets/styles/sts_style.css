@@ -44,6 +44,7 @@ body {
 }
 .critique-section {
     margin: 32px 0;
+    text-align: justify;
 }
 .critique-section h2 {
     color: #ffd700;
@@ -176,4 +177,8 @@ body {
     background: #222;
     transform: rotateY(180deg);
     border: 2px solid #ffd700;
+}
+
+.memory_title{
+    text-align: center;
 }

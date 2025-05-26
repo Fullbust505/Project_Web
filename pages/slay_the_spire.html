@@ -7,54 +7,7 @@
     <link rel="stylesheet" href="../assets/styles/common_styles.css">
     <link rel="stylesheet" href="../assets/styles/sts_style.css">
     <script src="../context/sts_script.js"></script>
-   <!-- <style>
-        .card-container {
-            perspective: 1000px;
-            width: 200px;
-            height: 300px;
-        }
-
-        .card {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.6s;
-        }
-
-        .card:hover {
-            transform: rotateY(180deg);
-        }
-
-        .card-front, .card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden; /* Empêche la face arrière d'être visible par-dessus */
-        }
-
-        .card-front {
-            background: url('../assets/images/testcard.png') no-repeat center/cover;
-        }
-
-        .card-back {
-            background: #ccc;
-            transform: rotateY(180deg);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style> -->
-</head>
-<body>
-    <!--<div class="card-container">
-        <div class="card">
-            <div class="card-front"></div>
-            <div class="card-back">test</div>
-        </div>
-    </div> -->
-
-   <!-- Top bar with game logos -->
+   
     <header>
         <nav>
             <a href="./home.html">Home</a>
@@ -70,7 +23,7 @@
             <a href="./about_us.html">About Us</a>
         </nav>
     </header>
-    <!-- Music button top right -->
+
     <div style="position: fixed; top: 20px; right: 32px; z-index: 1000; display: flex; align-items: center;">
         <span style="font-size: 0.95em; color: #eee; margin-right: 10px; opacity: 0.8;">
             Click here to hear the videogame music&nbsp;!
@@ -114,7 +67,6 @@
         };
     </script>
 
-    <!-- Slay the Spire logo at the top of the page -->
     <div style="text-align:center; margin-top:32px;">
         <img src="../assets/images/sps_logo.png" alt="Slay the Spire logo" style="width:400px; max-width:90vw;">
     </div>
@@ -128,9 +80,15 @@
                 </div>
             </div>
             <div class="critique-section">
-                <h2>Our Review</h2>
+                <h2>Written by <em>IGN</em></h2>
                 <p>
-                    Slay the Spire is a masterful blend of roguelike progression and deck-building strategy. Each run is a new puzzle, requiring careful planning, adaptation, and a bit of luck. The game’s replayability and depth make it a must-play for fans of strategy and card games.
+                    Slay the Spire is one of those games where I found myself sitting alone at my desk just giggling as I played. 
+                    Not because it’s exceptionally funny – though its well-written encounters can be that – but because some combo of cards that had chanced its way into my hand would just go off, and the result was an absolute thrill. 
+                    I couldn’t help but laugh because, win or lose, that combo may never show up again. But boy, was it a blast in the moment.
+                    <br><br>
+                    Here’s a genre mix you probably haven’t seen before: Slay the Spire is a deckbuilding roguelike dungeon crawler. 
+                    Don’t mistake it for a deckbuilding game like Hearthstone or Magic: The Gathering; instead, you pick one of three varied but equally exciting characters with unique card pools and start with a super basic deck. 
+                    As you work your way up the Spire, you’ll fight increasingly difficult monsters to acquire a randomized selection of new cards that slowly build your deck into something better.
                 </p>
             </div>
 <div class="critique-section">
@@ -218,63 +176,7 @@
         </aside >
     </main>
 
-    <!--
-    <div class="card-container">
-        <div class="card">
-            <div class="card-front"></div>
-            <div class="card-back">test</div>
-        </div>
-    </div>
-    -->
-<!--Test memory (code from reddit that i manipulated a little bit)-->
-<!--<div class="critique-section">
-    <h2>Strengths</h2>
-    <div class="card-list">
-        <div class="card-container">
-            <div class="card">
-                <div class="card-front"></div>
-                <div class="card-back">Deep and strategic deck-building mechanics</div>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <div class="card-front"></div>
-                <div class="card-back">High replay value with procedurally generated runs</div>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <div class="card-front"></div>
-                <div class="card-back">Unique characters and playstyles</div>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <div class="card-front"></div>
-                <div class="card-back">Challenging and rewarding progression</div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="critique-section">
-    <h2>Weaknesses</h2>
-    <div class="card-list">
-        <div class="card-container">
-            <div class="card">
-                <div class="card-front"></div>
-                <div class="card-back">Luck can sometimes outweigh strategy</div>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <div class="card-front"></div>
-                <div class="card-back">Visuals are functional but not outstanding</div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<div class="critique-section">
+<div class="memory_title">
     <h2>Slay the Spire Memory Game</h2>
     <div id="memo-game"></div>
     <p id="memo-message" style="color:#ffd700; font-weight:bold;"></p>

@@ -37,6 +37,44 @@
         <audio id="bg-music" src="../assets/sounds/Hades - No Escape.mp3" loop></audio>
     </div>
 
+    <div style="text-align:center; margin-top:32px;">
+        <img src="../assets/images/hades_logo.png" alt="Slay the Spire logo" style="width:400px; max-width:90vw;">
+    </div>
+
+    <script>
+        const btn = document.getElementById('launchmusicbutton');
+        const audio = document.getElementById('bg-music');
+        const img = document.getElementById('music-img');
+        let isPlaying = false;
+
+        function setButtonState(playing) {
+            if (playing) {
+                btn.classList.add('playing');
+                img.style.opacity = "0.7";
+            } else {
+                btn.classList.remove('playing');
+                img.style.opacity = "1";
+            }
+        }
+
+        btn.onclick = function() {
+            if (!isPlaying) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        };
+
+        audio.onpause = function() {
+            isPlaying = false;
+            setButtonState(false);
+        };
+        audio.onplay = function() {
+            isPlaying = true;
+            setButtonState(true);
+        };
+    </script>
+
     <main id="main_grid">
         <div class="critique-container">
             <div class="critique-header">
