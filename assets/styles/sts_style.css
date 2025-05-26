@@ -104,7 +104,7 @@ body {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.6s cubic-bezier(.4,2,.6,1);
+    transition: transform 0.6s cubic-bezier(.4,2,.6,1) 0.15s;
     cursor: pointer;
     will-change: transform;
 }
