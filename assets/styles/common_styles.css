@@ -8,6 +8,12 @@
     font-weight: bold;
     src: url("../fonts/ubuntu-font-family-0.80/Ubuntu-B.ttf");
 }
+
+@font-face {    
+  font-family: UbuntuM;
+  src: url("../fonts/ubuntu-font-family-0.80/Ubuntu-M.ttf");
+}
+
 /*If you want to add a font, add another "@font-face"*/
 /*If you want to add a variant of a font, do the same, keep the same name, but precise the change with font-weight or smtg else*/
 /*https://www.w3schools.com/css/css3_fonts.asp*/
@@ -21,7 +27,10 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    
     font-family: UbuntuR;
+    letter-spacing: 1.5px;
+
     color: whitesmoke;
 
     text-align: center;

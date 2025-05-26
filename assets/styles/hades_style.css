@@ -6,11 +6,13 @@ body {
 
 #main_grid {
     margin-top: 50px;
+    margin-bottom: 50px;
 
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 5%;
+    grid-gap: 3%;
     width: 100%;
+    
 }
 
 .critique-container {
@@ -44,6 +46,7 @@ body {
 }
 .critique-section {
     margin: 32px 0;
+    text-align: justify;
 }
 .critique-section h2 {
     color: #ffd700;
@@ -80,4 +83,24 @@ body {
 }
 #launchmusicbutton.playing img {
     filter: grayscale(60%) brightness(0.8);
+}
+
+/* HADES MAP */
+.hades-map-button{
+    height: 100px;
+}
+
+.hades-map-button a{
+    background-color: #ffd700;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    text-decoration-line: none;
+    color: black;
+    font-size: larger;
 }
