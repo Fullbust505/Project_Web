@@ -17,7 +17,7 @@
             <a href="./slay_the_spire.html" id="sps_btn">
                 <img src="../assets/images/sps_logo.png" alt="Slay The Spire's logo">
             </a>
-            <a href="./ghostrunner.html" id="gr_btn">
+            <a href="./building_page.html" id="gr_btn">
                 <img src="../assets/images/gr_logo.png" alt="Ghostrunner's logo">
             </a>
             <a href="./about_us.html">About Us</a>
@@ -33,6 +33,8 @@
         </button>
         <audio id="bg-music" src="../assets/sounds/sts_main.mp3" loop></audio>
     </div>
+
+    <!--For some obscur reason, moving this in a js file breaks it :/-->
     <script>
         const btn = document.getElementById('launchmusicbutton');
         const audio = document.getElementById('bg-music');
@@ -176,12 +178,16 @@
         </aside >
     </main>
 
-<div class="memory_title">
-    <h2>Slay the Spire Memory Game</h2>
-    <div id="memo-game"></div>
-    <p id="memo-message" style="color:#ffd700; font-weight:bold;"></p>
-</div>
+    <div class="memory_title">
+        <h2>Slay the Spire Memory Game</h2>
+        <div id="memo-game"></div>
+        <p id="memo-message" style="color:#ffd700; font-weight:bold;"></p>
+    </div>
 
+    <footer>
+        <p>Enjoying our reviews ?</p>
+        <a href="../pages/about_us.html">Come help us out !</a>
+    </footer>
 
 </body>
 </html>

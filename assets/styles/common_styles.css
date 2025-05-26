@@ -56,9 +56,7 @@ nav{
     font-family: UbuntuR;
     text-align: left;
 
-    border-bottom: solid;
-    border-color: black;
-    background-color: aliceblue;
+    background-color: #1b202ebd;
 
     height: 20%;
     display: flex;
@@ -125,6 +123,8 @@ nav a:last-child{
     flex-direction: column;
 
     border: solid 2px;
+    border-color: rgba(153, 153, 153, 0.85);
+    border-radius: 5px;
     background-color: rgba(30, 30, 30, 0.8);
 }
 
@@ -187,4 +187,8 @@ nav a:last-child{
 
 footer{
     margin: 10px;
+}
+
+footer a{
+    color: white;
 }

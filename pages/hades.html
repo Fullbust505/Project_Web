@@ -10,7 +10,6 @@
 
 <body>
 
-    <!-- Top bar with game logos -->
     <header>
         <nav>
             <a href="./home.html">Home</a>
@@ -20,13 +19,13 @@
             <a href="./slay_the_spire.html" id="sps_btn">
                 <img src="../assets/images/sps_logo.png" alt="Slay The Spire's logo">
             </a>
-            <a href="./ghostrunner.html" id="gr_btn">
+            <a href="./building_page.html" id="gr_btn">
                 <img src="../assets/images/gr_logo.png" alt="Ghostrunner's logo">
             </a>
             <a href="./about_us.html">About Us</a>
         </nav>
     </header>
-    <!-- Music button top right -->
+
     <div style="position: fixed; top: 20px; right: 32px; z-index: 1000; display: flex; align-items: center;">
         <span style="font-size: 0.95em; color: #eee; margin-right: 10px; opacity: 0.8;">
             Click here to hear the videogame music&nbsp;!
@@ -41,6 +40,7 @@
         <img src="../assets/images/hades_logo.png" alt="Slay the Spire logo" style="width:400px; max-width:90vw;">
     </div>
 
+    <!--For some obscur reason, moving this in a js file is breaking it :/-->
     <script>
         const btn = document.getElementById('launchmusicbutton');
         const audio = document.getElementById('bg-music');
@@ -127,7 +127,7 @@
             </div>
             <div class="hades-map-button">
                 <p>Come check out our interactive map of the regions of Hell !</p>
-                <a href="../pages/hades_map.html">Check map</a>
+                <a href="../pages/building_page.html">Check map</a>
             </div>
             <div class="critique-section">
                 Zag is a rebellious heartthrob trying to find his place in the world between Hades and Mount Olympus. 
@@ -157,5 +157,10 @@
             </section>
         </aside >
     </main>
+
+    <footer>
+        <p>Enjoying our reviews ?</p>
+        <a href="../pages/about_us.html">Come help us out !</a>
+    </footer>
 </body>
 </html>

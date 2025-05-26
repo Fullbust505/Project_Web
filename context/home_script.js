@@ -1,38 +1,45 @@
-// Animate satisfaction stat when visible
-function animateStat(finalValue, duration = 1200) {
-    const el = document.getElementById('satisfaction_value');
-    if (!el) return;
-    let start = 0;
-    const startTime = performance.now();
-    function update(now) {
-        const elapsed = now - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const value = Math.floor(progress * finalValue);
-        el.textContent = value + '%';
-        if (progress < 1) {
-            requestAnimationFrame(update);
-        } else {
-            el.textContent = finalValue + '%';
-        }
+ function animateStatElement(el, finalValue, duration = 1200) {
+let isPercent = el.textContent.trim().endsWith('%') || el.dataset.value.endsWith('%');
+let isFloat = String(finalValue).includes('.');
+const startTime = performance.now();
+function update(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    let value;
+    if (isFloat) {
+        value = (progress * finalValue).toFixed(1);
+    } else {
+        value = Math.floor(progress * finalValue);
     }
-    requestAnimationFrame(update);
+    el.textContent = value + (isPercent ? '%' : '');
+    if (progress < 1) {
+        requestAnimationFrame(update);
+    } else {
+        el.textContent = finalValue + (isPercent ? '%' : '');
+    }
+}
+requestAnimationFrame(update);
 }
 
 function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top < window.innerHeight && rect.bottom > 0
-    );
+const rect = element.getBoundingClientRect();
+return (
+    rect.top < window.innerHeight && rect.bottom > 0
+);
 }
 
-let statAnimated = false;
-function checkAndAnimateStat() {
-    const stat = document.getElementById('satisfaction_stat');
-    if (!statAnimated && stat && isInViewport(stat)) {
-        animateStat(70);
-        statAnimated = true;
-    }
+let statsAnimated = false;
+function checkAndAnimateStatsGrid() {
+const grid = document.getElementById('stats_grid');
+if (!statsAnimated && grid && isInViewport(grid)) {
+    document.querySelectorAll('.stat_value').forEach(el => {
+        let val = el.dataset.value;
+        let num = parseFloat(val);
+        animateStatElement(el, num);
+    });
+    statsAnimated = true;
+}
 }
 
-window.addEventListener('scroll', checkAndAnimateStat);
-window.addEventListener('DOMContentLoaded', checkAndAnimateStat);
+window.addEventListener('scroll', checkAndAnimateStatsGrid);
+window.addEventListener('DOMContentLoaded', checkAndAnimateStatsGrid);
