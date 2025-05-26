@@ -85,15 +85,17 @@ body {
 
 .card-list {
     display: flex;
-    gap: 24px;
+    gap: 32px; /* augmente l'espace entre les cartes */
     flex-wrap: wrap;
     margin-bottom: 16px;
+    align-items: stretch;
 }
 
 .card-container {
     perspective: 1000px;
     width: 180px;
     height: 260px;
+    /* pas de margin ici */
 }
 
 .card {
@@ -101,12 +103,9 @@ body {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.6s;
+    transition: transform 0.6s cubic-bezier(.4,2,.6,1);
     cursor: pointer;
-}
-
-.card:hover {
-    transform: rotateY(180deg);
+    will-change: transform;
 }
 
 .card-front, .card-back {
@@ -121,6 +120,7 @@ body {
     justify-content: center;
     font-size: 1.1em;
     padding: 16px;
+    box-sizing: border-box;
 }
 
 .card-front {
@@ -133,4 +133,47 @@ body {
     transform: rotateY(180deg);
     font-weight: bold;
     text-align: center;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+#memo-game {
+    margin-bottom: 24px;
+}
+.memo-card-container {
+    width: 100px;
+    height: 140px;
+    perspective: 800px;
+}
+.memo-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.memo-card.flipped, .memo-card.matched {
+    transform: rotateY(180deg);
+}
+.memo-card-front, .memo-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.memo-card-front {
+    background: url('../images/testcard.png') no-repeat center/cover;
+    border: 2px solid #ffd700;
+}
+.memo-card-back {
+    background: #222;
+    transform: rotateY(180deg);
+    border: 2px solid #ffd700;
 }
