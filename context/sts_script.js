@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const memoMessage = document.getElementById('memo-message');
     let firstCard = null, secondCard = null, lock = false, matched = 0;
 
+
+
     if (!memoGame) return;
 
     memoGame.style.display = "grid";
@@ -35,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         container.innerHTML = `
             <div class="memo-card" data-idx="${idx}" data-pairid="${card.pairId}" data-uniqueid="${card.uniqueId}">
                 <div class="memo-card-front"></div>
-                <div class="memo-card-back"><img src="../images/${card.img}" alt="" style="width:80px;height:110px;border-radius:8px;"></div>
+                <div class="memo-card-back"><img src="../assets/images/${card.img}" alt="" style="width:80px;height:110px;border-radius:8px;"></div>
             </div>
         `;
         memoGame.appendChild(container);
