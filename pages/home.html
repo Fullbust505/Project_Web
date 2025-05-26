@@ -5,6 +5,7 @@
         <title>Full Indie - Home</title>
         <link rel="stylesheet" href="../assets/styles/common_styles.css">
         <link rel="stylesheet" href="../assets/styles/home_style.css">
+        <script src="../context/home_script.js"></script>
     </head>
         
     <body>
@@ -25,7 +26,7 @@
         </header>
 
         <section id="main_text">
-            
+            <!--
             <aside id="sidebar">
                 <h3>You might like : </h3>
                 <section>
@@ -43,9 +44,52 @@
                     </a>
                 </section>
             </aside >
+            -->
             <div id="intro">
                 <h1>Welcome to Full Indie !</h1>
-                <p>Find out our indepths reviews of inde games excluded from the spotlight.</p>
+                <h2>Find out our indepths reviews of inde games excluded from the spotlight</h2>
+            </div>
+            <div id="stats_grid">
+                <div class="stat_box">
+                    <span class="stat_value" data-value="70">0%</span>
+                    <p>Satisfaction Rate</p>
+                </div>
+                <div class="stat_box">
+                    <span class="stat_value" data-value="120">0</span>
+                    <p>Games Reviewed</p>
+                </div>
+                <div class="stat_box">
+                    <span class="stat_value" data-value="45">0</span>
+                    <p>Indie Studios Featured</p>
+                </div>
+                <div class="stat_box">
+                    <span class="stat_value" data-value="3500">0</span>
+                    <p>Community Members</p>
+                </div>
+                <div class="stat_box">
+                    <span class="stat_value" data-value="7">0</span>
+                    <p>Average Review Score</p>
+                </div>
+                <div class="stat_box">
+                    <span class="stat_value" data-value="22">0</span>
+                    <p>Countries Reached</p>
+                </div>
+                <div class="stat_box">
+                    <span class="stat_value" data-value="15">0</span>
+                    <p>Editors</p>
+                </div>
+                <div class="stat_box">
+                    <span class="stat_value" data-value="300">0</span>
+                    <p>Articles Published</p>
+                </div>
+                <div class="stat_box">
+                    <span class="stat_value" data-value="98">0%</span>
+                    <p>Positive Feedback</p>
+                </div>
+                <div class="stat_box">
+                    <span class="stat_value" data-value="2017">0</span>
+                    <p>Founded</p>
+                </div>
             </div>
         </section>
     
@@ -53,7 +97,54 @@
         <p>Enjoying our reviews ?</p>
         <a href="../pages/about_us.html">Come help us out !</a>
     </footer>
-    
-    </body>
+    <script>
+        // Animate all stats in the grid when visible
+        function animateStatElement(el, finalValue, duration = 1200) {
+            let isPercent = el.textContent.trim().endsWith('%') || el.dataset.value.endsWith('%');
+            let isFloat = String(finalValue).includes('.');
+            const startTime = performance.now();
+            function update(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                let value;
+                if (isFloat) {
+                    value = (progress * finalValue).toFixed(1);
+                } else {
+                    value = Math.floor(progress * finalValue);
+                }
+                el.textContent = value + (isPercent ? '%' : '');
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    el.textContent = finalValue + (isPercent ? '%' : '');
+                }
+            }
+            requestAnimationFrame(update);
+        }
+
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top < window.innerHeight && rect.bottom > 0
+            );
+        }
+
+        let statsAnimated = false;
+        function checkAndAnimateStatsGrid() {
+            const grid = document.getElementById('stats_grid');
+            if (!statsAnimated && grid && isInViewport(grid)) {
+                document.querySelectorAll('.stat_value').forEach(el => {
+                    let val = el.dataset.value;
+                    let num = parseFloat(val);
+                    animateStatElement(el, num);
+                });
+                statsAnimated = true;
+            }
+        }
+
+        window.addEventListener('scroll', checkAndAnimateStatsGrid);
+        window.addEventListener('DOMContentLoaded', checkAndAnimateStatsGrid);
+    </script>
+</body>
 
 </html>
