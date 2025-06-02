@@ -49,7 +49,6 @@ body{
     justify-content: center;
 }
 
-/* NAVIGATION BAR */
 
 nav{
     font-size: x-large;
@@ -61,30 +60,88 @@ nav{
     height: 20%;
     display: flex;
     padding: 0;
-    /*gap: 5%;*/
+   
 }
 
-nav a{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 6%;
-    text-align: center;
-
-    border-radius: 3px;
-
-    text-decoration-line: none;
-    color: black;
-
-    transition: transform 0.3s ease;
+nav {
+    display: flex;
+    align-items: center;
+    gap: 7%;                   
+    padding: 0 40px;
+    font-family: UbuntuR, Arial, sans-serif;
+    font-size: 1.25em;
+    background-color: #1b202ebd;
+    height: 70px;
+    min-height: 60px;
+    box-sizing: border-box;
 }
 
-nav a:hover{
-    transform: scale(1.1);
+nav a {
+    margin: 0;
+    padding: 10px 20px;
+    color: #ffd700;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1em;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    background: transparent;
+    box-shadow: none;
 }
 
-nav a:first-child{
-    margin-left: 3%;
-    background-color: antiquewhite;
+nav a:hover {
+    background: #ffd700;
+    color: #222;
+    transform: scale(1.08);
+}
+
+nav a img {
+    height: 40px;
+    width: auto;
+    margin-right: 8px;
+}
+
+nav a:first-child {
+    margin-left: 0;
+    background: antiquewhite;
+    color: #222;
+}
+
+#hades_btn {
+    background-color: crimson;
+    color: #fff;
+}
+#sps_btn {
+    background-color: #E08D3C;
+    color: #fff;
+}
+#gr_btn {
+    background-color: goldenrod;
+    color: #fff;
+}
+
+#hades_btn img, #sps_btn img, #gr_btn img {
+    width: 100%;
+    height: 40px;
+}
+
+nav a.about-link {
+    background-color: grey;
+    color: #fff;
+}
+
+#carrousel_btn {
+    background: #ffd700;
+    color: #222;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+#carrousel_btn:hover {
+    background: #222;
+    color: #ffd700;
 }
 
 #hades_btn{
@@ -192,3 +249,16 @@ footer{
 footer a{
     color: white;
 }
+
+
+
+
+nav a:first-child,
+nav a.about-link {
+    font-size: 1.18em;
+    padding: 14px 28px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+
