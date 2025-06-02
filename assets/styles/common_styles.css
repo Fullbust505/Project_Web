@@ -117,7 +117,7 @@ nav a:last-child{
     margin-right: 50px;
 
     position: sticky;
-    top: 10px;          /* For an obscur reason, remove this line and the sidebar is not sticky anymore. Like wtf*/ 
+    top: 10px;          /* For an obscur reason, remove this line and the sidebar is not sticky anymore. Like WHAT*/ 
 
     display: flex;
     flex-direction: column;
