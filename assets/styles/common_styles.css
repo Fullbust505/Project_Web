@@ -49,6 +49,7 @@ body{
     justify-content: center;
 }
 
+/* NAVIGATION BAR */
 
 nav{
     font-size: x-large;
@@ -68,6 +69,8 @@ nav {
     align-items: center;
     gap: 7%;                   
     padding: 0 40px;
+    padding-bottom: 50px;
+    padding-top: 50px;
     font-family: UbuntuR, Arial, sans-serif;
     font-size: 1.25em;
     background-color: #1b202ebd;
