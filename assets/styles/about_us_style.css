@@ -40,7 +40,7 @@ legend{
     width: 180px;
 }
 
-#form_sub_box p input{
+#form_sub_box p input, textarea{
     flex: 1;
     max-width: 650px;
     margin-left: auto;
