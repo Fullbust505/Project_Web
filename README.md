@@ -10,7 +10,14 @@ We decided to create a website around our common passion : video games. Well, no
 
 The mockup of the project is available in a dedicated folder, in assets.
 
-## Having an issue ?
+## Having An Issue ?
 
 If the display seems off, or some links are not working, make sure you're running a Live Server, in order to make the JavaScript work.
 If there are still issues, don't hesitate to send us a message or a mail.
+
+## Validator W3C Known Errors and Warnings
+
+We are aware that the page is not entirely W3C valid. But the issues are things that we cannot fix :
+
+1. Error: The frameborder attribute on the iframe element is obsolete. Use CSS instead
+   This issue comes from the embedded Youtube video. This property works fine in HTML but its CSS property is not working so we cannot fix this issue.
